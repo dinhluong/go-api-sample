@@ -30,7 +30,8 @@ func main() {
 	people = append(people, Persion{ID: "1", FirstName: "John", LastName: "Doe", Address: &Address{City: "city x", State: "america"}})
 	people = append(people, Persion{ID: "2", FirstName: "Steve", LastName: "jon", Address: &Address{City: "city y", State: "india"}})
 	people = append(people, Persion{ID: "3", FirstName: "what", LastName: "hell"})
-
+	var randomKey = Key()
+	print(randomKey)
 	router := mux.NewRouter()
 	router.HandleFunc("/people", GetPeople).Methods("GET")
 	router.HandleFunc("/people/{id}", GetPersion).Methods("GET")
